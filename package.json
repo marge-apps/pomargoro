@@ -1,0 +1,66 @@
+{
+	"name": "use-confirm",
+	"version": "0.0.1",
+	"description": "Confirm your forms with ease",
+	"repository": "git@github.com:marge-apps/pomargoro.git",
+	"author": [{
+		"name": "Marios Antonoudiou",
+		"email": "mariosant@sent.com",
+		"website": "https://mariosant.carrd.co"
+		},	{
+			"name": "George Aidonidis",
+			"email": "georgeaidonidis@gmail.com",
+			"url": "https://iamgeorge.dev"
+		}
+	],
+	"scripts": {
+		"lint": "xo",
+		"release": "standard-version",
+		"test": "jest"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/cli": "^7.4.4",
+		"@babel/core": "^7.4.5",
+		"@babel/preset-env": "^7.4.5",
+		"@babel/preset-react": "^7.0.0",
+		"eslint-config-xo-react": "^0.19.0",
+		"eslint-plugin-react": "^7.14.2",
+		"eslint-plugin-react-hooks": "^1.6.1",
+		"faker": "^4.1.0",
+		"husky": "^2.7.0",
+		"jest": "^24.8.0",
+		"mdx-go": "^2.0.0-32",
+		"prettier": "^1.18.2",
+		"ramda": "^0.26.1",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-hooks-testing-library": "^0.6.0",
+		"react-testing-library": "^8.0.1",
+		"standard-version": "^6.0.1",
+		"xo": "^0.24.0"
+	},
+	"xo": {
+		"prettier": true,
+		"extends": [
+			"xo-react"
+		],
+		"envs": [
+			"jest",
+			"browser"
+		],
+		"rules": {
+			"camelcase": 1
+		},
+		"ignores": [
+			"docs/*",
+			"fixtures/*"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn lint",
+			"pre-push": "yarn test"
+		}
+	}
+}
